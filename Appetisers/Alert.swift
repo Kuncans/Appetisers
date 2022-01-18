@@ -30,5 +30,4 @@ struct AlertContext {
     static let unableToComplete = AlertItem(title: Text("Server Error"),
                                             message: Text("Unable to complete your request at this time."),
                                             dismissButton: .default(Text("OK")))
-    
 }
