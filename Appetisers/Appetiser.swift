@@ -18,7 +18,7 @@ struct Appetiser: Decodable, Identifiable {
     let carbs: Int
 }
 
-struct AppetiserResponse {
+struct AppetiserResponse: Decodable {
     let request: [Appetiser]
 }
 

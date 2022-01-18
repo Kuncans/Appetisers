@@ -17,7 +17,7 @@ struct AppetiserCellView: View {
             Image("asian-flank-steak")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 160, height: 120)
+                .frame(width: 120, height: 90)
                 .cornerRadius(16)
 
             VStack (alignment: .leading, spacing: 5) {
