@@ -12,8 +12,11 @@ struct AppetiserCellView: View {
         HStack {
             Image("asian-flank-steak")
                 .resizable()
-                .frame(minWidth: 60, maxWidth: 100, minHeight: 40, maxHeight: 80, alignment: .leading)
-                
+                .frame(width: 120, height: 80, alignment: .leading)
+            VStack {
+                Text("Buffalo Chicken Bites")
+                    .font(.title2)
+            }
         }
     }
 }
