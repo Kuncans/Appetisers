@@ -12,7 +12,7 @@ struct AccountView: View {
         NavigationView {
             Text("Account")
                 .navigationTitle("😬 Account")
-        }
+        }.navigationViewStyle(.stack)
         
     }
 }

@@ -18,11 +18,11 @@ struct AppetiserListView: View {
                 }
                 .navigationTitle("🌮 Appetisers")
                 .listStyle(.plain)
-        }
+        } .navigationViewStyle(.stack)
         .onAppear {
             viewModel.getAppetisers()
         }
-        .navigationViewStyle(.stack)
+       
     }
     
 }

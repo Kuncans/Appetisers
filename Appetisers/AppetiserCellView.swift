@@ -18,11 +18,11 @@ struct AppetiserCellView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 90)
-                .cornerRadius(16)
+                .cornerRadius(8)
 
             VStack (alignment: .leading, spacing: 5) {
                 Text(appetiser.name)
-                    .font(.title)
+                    .font(.title2)
                     .fontWeight(.medium)
                 
                 Text("£\(appetiser.price, specifier: "%.2f")")

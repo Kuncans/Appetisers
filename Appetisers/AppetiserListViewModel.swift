@@ -21,8 +21,6 @@ final class AppetiserListViewModel: ObservableObject {
                     print(error.localizedDescription)
                 }
             }
-
         }
     }
-    
 }
