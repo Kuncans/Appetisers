@@ -8,21 +8,34 @@
 import SwiftUI
 
 struct AppetiserCellView: View {
+    
+    let appetiser: Appetiser
+    
     var body: some View {
+        
         HStack {
             Image("asian-flank-steak")
                 .resizable()
-                .frame(width: 120, height: 80, alignment: .leading)
-            VStack {
-                Text("Buffalo Chicken Bites")
-                    .font(.title2)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 160, height: 120)
+                .cornerRadius(16)
+
+            VStack (alignment: .leading, spacing: 5) {
+                Text(appetiser.name)
+                    .font(.title)
+                    .fontWeight(.medium)
+                
+                Text("£\(appetiser.price, specifier: "%.2f")")
+                    .fontWeight(.semibold)
+                    .foregroundColor(.secondary)
             }
+            .padding(.leading)
         }
     }
 }
 
 struct AppetiserCellView_Previews: PreviewProvider {
     static var previews: some View {
-        AppetiserCellView()
+        AppetiserCellView(appetiser: MockData.sampleAppetiser)
     }
 }
