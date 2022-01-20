@@ -17,6 +17,8 @@
 		5222E4BF2797148D00ADBBCA /* AppetiserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5222E4BE2797148D00ADBBCA /* AppetiserCellView.swift */; };
 		529D5D4727999A0E007C5388 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D4627999A0E007C5388 /* RemoteImage.swift */; };
 		529D5D562799A11A007C5388 /* AppetiserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D552799A11A007C5388 /* AppetiserDetailView.swift */; };
+		529D5D59279A1B1D007C5388 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D58279A1B1D007C5388 /* APButton.swift */; };
+		529D5D5B279A1C38007C5388 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D5A279A1C38007C5388 /* XDismissButton.swift */; };
 		52D29A072797051900DD96DA /* AppetisersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D29A062797051900DD96DA /* AppetisersApp.swift */; };
 		52D29A092797051900DD96DA /* AppetiserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D29A082797051900DD96DA /* AppetiserTabView.swift */; };
 		52D29A0B2797051A00DD96DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D29A0A2797051A00DD96DA /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		5222E4BE2797148D00ADBBCA /* AppetiserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetiserCellView.swift; sourceTree = "<group>"; };
 		529D5D4627999A0E007C5388 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		529D5D552799A11A007C5388 /* AppetiserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetiserDetailView.swift; sourceTree = "<group>"; };
+		529D5D58279A1B1D007C5388 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
+		529D5D5A279A1C38007C5388 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		52D29A032797051900DD96DA /* Appetisers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetisers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D29A062797051900DD96DA /* AppetisersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetisersApp.swift; sourceTree = "<group>"; };
 		52D29A082797051900DD96DA /* AppetiserTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetiserTabView.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		529D5D5127999F7A007C5388 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				529D5D57279A1B10007C5388 /* Buttons */,
 				529D5D5427999FA3007C5388 /* Image */,
 				529D5D5327999F9B007C5388 /* Cells */,
 				529D5D5227999F91007C5388 /* UIKit Components */,
@@ -170,6 +175,15 @@
 				529D5D4627999A0E007C5388 /* RemoteImage.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		529D5D57279A1B10007C5388 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				529D5D58279A1B1D007C5388 /* APButton.swift */,
+				529D5D5A279A1C38007C5388 /* XDismissButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		52D299FA2797051900DD96DA = {
@@ -282,10 +296,12 @@
 			files = (
 				521D4B422797510E00F3CF07 /* AppetiserListViewModel.swift in Sources */,
 				5222E4BF2797148D00ADBBCA /* AppetiserCellView.swift in Sources */,
+				529D5D5B279A1C38007C5388 /* XDismissButton.swift in Sources */,
 				521D4B4027972CCF00F3CF07 /* APError.swift in Sources */,
 				52D29A172797059B00DD96DA /* AccountView.swift in Sources */,
 				520CDE512798ABAE009B58CE /* Color+Ext.swift in Sources */,
 				52D29A092797051900DD96DA /* AppetiserTabView.swift in Sources */,
+				529D5D59279A1B1D007C5388 /* APButton.swift in Sources */,
 				529D5D562799A11A007C5388 /* AppetiserDetailView.swift in Sources */,
 				520CDE4F2798AA86009B58CE /* LoadingView.swift in Sources */,
 				52D29A072797051900DD96DA /* AppetisersApp.swift in Sources */,
