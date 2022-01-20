@@ -10,11 +10,11 @@ import SwiftUI
 struct AppetiserDetailView: View {
     
     let appetiser: Appetiser
+    @Binding var isShowingDetail: Bool
     
     var body: some View {
         VStack {
-            Image("asian-flank-steak")
-                .resizable()
+            AppetiserRemoteImage(urlString: appetiser.imageURL)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300, height: 225)
             
@@ -79,7 +79,7 @@ struct AppetiserDetailView: View {
         .cornerRadius(12)
         .shadow(radius: 40)
         .overlay(Button {
-            print("Dismiss")
+            isShowingDetail = false
         } label: {
             ZStack {
                 Circle()
@@ -98,7 +98,7 @@ struct AppetiserDetailView: View {
 
 struct AppetiserDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AppetiserDetailView(appetiser: MockData.sampleAppetiser)
+        AppetiserDetailView(appetiser: MockData.sampleAppetiser, isShowingDetail: .constant(false))
             //.preferredColorScheme(.dark)
     }
 }
