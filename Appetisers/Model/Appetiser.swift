@@ -26,7 +26,7 @@ struct MockData {
 
     static let sampleAppetiser = Appetiser(id: 0001,
                                            name: "Test Appetiser",
-                                           description: "Test Description",
+                                           description: "This is a test description. It is very descriptive. Yum.",
                                            price: 10.40,
                                            imageURL: "imageurl string test",
                                            calories: 200,
