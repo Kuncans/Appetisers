@@ -19,6 +19,8 @@
 		529D5D562799A11A007C5388 /* AppetiserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D552799A11A007C5388 /* AppetiserDetailView.swift */; };
 		529D5D59279A1B1D007C5388 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D58279A1B1D007C5388 /* APButton.swift */; };
 		529D5D5B279A1C38007C5388 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D5A279A1C38007C5388 /* XDismissButton.swift */; };
+		529D5D5D279A2248007C5388 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D5C279A2248007C5388 /* AccountViewModel.swift */; };
+		529D5D5F279A238B007C5388 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D5E279A238B007C5388 /* String+Ext.swift */; };
 		52D29A072797051900DD96DA /* AppetisersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D29A062797051900DD96DA /* AppetisersApp.swift */; };
 		52D29A092797051900DD96DA /* AppetiserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D29A082797051900DD96DA /* AppetiserTabView.swift */; };
 		52D29A0B2797051A00DD96DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D29A0A2797051A00DD96DA /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		529D5D552799A11A007C5388 /* AppetiserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetiserDetailView.swift; sourceTree = "<group>"; };
 		529D5D58279A1B1D007C5388 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
 		529D5D5A279A1C38007C5388 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		529D5D5C279A2248007C5388 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		529D5D5E279A238B007C5388 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		52D29A032797051900DD96DA /* Appetisers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetisers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D29A062797051900DD96DA /* AppetisersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetisersApp.swift; sourceTree = "<group>"; };
 		52D29A082797051900DD96DA /* AppetiserTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetiserTabView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				52D29A162797059B00DD96DA /* AccountView.swift */,
+				529D5D5C279A2248007C5388 /* AccountViewModel.swift */,
 			);
 			path = AccountView;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				520CDE502798ABAE009B58CE /* Color+Ext.swift */,
+				529D5D5E279A238B007C5388 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				5222E4BF2797148D00ADBBCA /* AppetiserCellView.swift in Sources */,
 				529D5D5B279A1C38007C5388 /* XDismissButton.swift in Sources */,
 				521D4B4027972CCF00F3CF07 /* APError.swift in Sources */,
+				529D5D5D279A2248007C5388 /* AccountViewModel.swift in Sources */,
 				52D29A172797059B00DD96DA /* AccountView.swift in Sources */,
 				520CDE512798ABAE009B58CE /* Color+Ext.swift in Sources */,
 				52D29A092797051900DD96DA /* AppetiserTabView.swift in Sources */,
@@ -306,6 +313,7 @@
 				520CDE4F2798AA86009B58CE /* LoadingView.swift in Sources */,
 				52D29A072797051900DD96DA /* AppetisersApp.swift in Sources */,
 				521D4B3E27972A6500F3CF07 /* NetworkManager.swift in Sources */,
+				529D5D5F279A238B007C5388 /* String+Ext.swift in Sources */,
 				529D5D4727999A0E007C5388 /* RemoteImage.swift in Sources */,
 				52D29A152797059200DD96DA /* AppetiserListView.swift in Sources */,
 				520CDE4D27975E5B009B58CE /* Alert.swift in Sources */,

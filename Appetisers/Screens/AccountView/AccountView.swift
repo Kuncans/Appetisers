@@ -9,40 +9,41 @@ import SwiftUI
 
 struct AccountView: View {
     
-    @State private var firstName = ""
-    @State private var lastName = ""
-    @State private var email = ""
-    @State private var birthDate = Date()
-    @State private var extraNapkins = false
-    @State private var unlimitedRefills = false
+    @StateObject var viewModel = AccountViewModel()
 
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Personal Info")) {
-                    TextField("First Name", text: $firstName)
-                    TextField("Last Name", text: $lastName)
-                    TextField("Email", text: $email)
+                    TextField("First Name", text: $viewModel.firstName)
+                    TextField("Last Name", text: $viewModel.lastName)
+                    TextField("Email", text: $viewModel.email)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                    DatePicker("Birth Date", selection: $birthDate, displayedComponents: .date)
+                    DatePicker("Birth Date", selection: $viewModel.birthDate, displayedComponents: .date)
                     
                     Button {
-                        print("Save")
+                        viewModel.saveChanges()
                     } label: {
                         Text("Save Changes")
                     }
 
                 }
                 Section(header: Text("Requests")) {
-                    Toggle("Extra Napkins", isOn: $extraNapkins)
-                    Toggle("Unlimited Refills", isOn: $unlimitedRefills)
+                    Toggle("Extra Napkins", isOn: $viewModel.extraNapkins)
+                    Toggle("Unlimited Refills", isOn: $viewModel.unlimitedRefills)
                 }.toggleStyle(SwitchToggleStyle(tint: .brandPrimary))
 
             }
             .navigationTitle("😬 Account")
-        }.navigationViewStyle(.stack)
+        }
+        .navigationViewStyle(.stack)
+        .alert(item: $viewModel.alertItem) { alertItem in
+            Alert(title: alertItem.title,
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
+            }
     }
 }
 
