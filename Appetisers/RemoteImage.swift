@@ -21,12 +21,23 @@ final class ImageLoader: ObservableObject {
     }
 }
 
-struct remoteImage: View {
+struct RemoteImage: View {
     
     var image: Image?
     
     var body: some View {
-        image?.resizable() ?? Image("food-placeholder")
+        image?.resizable() ?? Image("food-placeholder").resizable()
     }
+}
+
+struct AppetiserRemoteImage: View {
     
+    @StateObject var imageLoader = ImageLoader()
+    
+    let urlString: String
+    
+    var body: some View {
+        RemoteImage(image: imageLoader.image)
+            .onAppear { imageLoader.load(fromURLString: urlString) }
+    }
 }

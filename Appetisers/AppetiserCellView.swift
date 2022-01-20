@@ -14,8 +14,7 @@ struct AppetiserCellView: View {
     var body: some View {
         
         HStack {
-            Image("asian-flank-steak")
-                .resizable()
+            AppetiserRemoteImage(urlString: appetiser.imageURL)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 120, height: 90)
                 .cornerRadius(8)
@@ -37,5 +36,6 @@ struct AppetiserCellView: View {
 struct AppetiserCellView_Previews: PreviewProvider {
     static var previews: some View {
         AppetiserCellView(appetiser: MockData.sampleAppetiser)
+            .previewLayout(.sizeThatFits)
     }
 }
