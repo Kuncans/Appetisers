@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct AppetiserListView: View {
-       
+    
     @StateObject var viewModel = AppetiserListViewModel()
     
     var body: some View {
-        NavigationView {
-            List(viewModel.appetisers) { appetiser in
+        ZStack {
+            NavigationView {
+                List(viewModel.appetisers) { appetiser in
                     AppetiserCellView(appetiser: appetiser)
                 }
                 .navigationTitle("🌮 Appetisers")
                 .listStyle(.plain)
-        } .navigationViewStyle(.stack)
-        .onAppear {
-            viewModel.getAppetisers()
+            }
+            .navigationViewStyle(.stack)
+                .onAppear {
+                    viewModel.getAppetisers()
+                }
+            
+            if viewModel.isLoading {
+                LoadingView()
+            }
+            
         }
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,
@@ -28,7 +36,6 @@ struct AppetiserListView: View {
                   dismissButton: alertItem.dismissButton)
         }
     }
-    
 }
 
 struct AppetiserListView_Previews: PreviewProvider {
