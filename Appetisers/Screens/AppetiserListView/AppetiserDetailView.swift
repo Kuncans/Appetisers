@@ -48,10 +48,10 @@ struct AppetiserDetailView: View {
                         .italic()
                 }
                 VStack(spacing: 5) {
-                    Text("Calories")
+                    Text("Protein")
                         .bold()
                         .font(.caption)
-                    Text("\(appetiser.calories)")
+                    Text("\(appetiser.protein)")
                         .foregroundColor(.secondary)
                         .fontWeight(.semibold)
                         .italic()
@@ -68,15 +68,31 @@ struct AppetiserDetailView: View {
                     .fontWeight(.semibold)
                     .frame(width: 240)
                     .cornerRadius(16)
+                    .padding(5)
             }
             .buttonStyle(.borderedProminent)
             .tint(.brandPrimary)
             .padding(.bottom, 30)
         }
         .frame(width: 300, height: 525)
-        .background(Color(.systemBackground))
+        .background(Color(.systemGray6))
         .cornerRadius(12)
         .shadow(radius: 40)
+        .overlay(Button {
+            print("Dismiss")
+        } label: {
+            ZStack {
+                Circle()
+                    .frame(width: 40, height: 40)
+                    .foregroundColor(.white)
+                    .opacity(0.8)
+                
+                Image(systemName: "xmark")
+                    .frame(width: 54, height: 54)
+                    .foregroundColor(.black)
+            }
+        }, alignment: .topTrailing)
+
     }
 }
 
