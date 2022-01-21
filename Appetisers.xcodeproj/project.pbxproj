@@ -22,6 +22,7 @@
 		529D5D5D279A2248007C5388 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D5C279A2248007C5388 /* AccountViewModel.swift */; };
 		529D5D5F279A238B007C5388 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D5E279A238B007C5388 /* String+Ext.swift */; };
 		529D5D61279AECF1007C5388 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D60279AECF1007C5388 /* User.swift */; };
+		529D5D63279AFD30007C5388 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D62279AFD30007C5388 /* OrderViewModel.swift */; };
 		52D29A072797051900DD96DA /* AppetisersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D29A062797051900DD96DA /* AppetisersApp.swift */; };
 		52D29A092797051900DD96DA /* AppetiserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D29A082797051900DD96DA /* AppetiserTabView.swift */; };
 		52D29A0B2797051A00DD96DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D29A0A2797051A00DD96DA /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		529D5D5C279A2248007C5388 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		529D5D5E279A238B007C5388 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		529D5D60279AECF1007C5388 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		529D5D62279AFD30007C5388 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		52D29A032797051900DD96DA /* Appetisers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetisers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D29A062797051900DD96DA /* AppetisersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetisersApp.swift; sourceTree = "<group>"; };
 		52D29A082797051900DD96DA /* AppetiserTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetiserTabView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				52D29A18279705A200DD96DA /* OrderView.swift */,
+				529D5D62279AFD30007C5388 /* OrderViewModel.swift */,
 			);
 			path = OrderView;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				529D5D59279A1B1D007C5388 /* APButton.swift in Sources */,
 				529D5D562799A11A007C5388 /* AppetiserDetailView.swift in Sources */,
 				520CDE4F2798AA86009B58CE /* LoadingView.swift in Sources */,
+				529D5D63279AFD30007C5388 /* OrderViewModel.swift in Sources */,
 				52D29A072797051900DD96DA /* AppetisersApp.swift in Sources */,
 				521D4B3E27972A6500F3CF07 /* NetworkManager.swift in Sources */,
 				529D5D5F279A238B007C5388 /* String+Ext.swift in Sources */,

@@ -8,10 +8,36 @@
 import SwiftUI
 
 struct OrderView: View {
+    
+    @StateObject private var viewModel = OrderViewModel()
+    
     var body: some View {
         NavigationView {
-            Text("Orders")
-                .navigationTitle("🧾 Orders")
+            VStack {
+                List {
+                    ForEach(viewModel.orderItems) { appetiser in
+                        AppetiserCellView(appetiser: appetiser)
+                            .swipeActions(allowsFullSwipe: true) {                                Button("Delete", role: .destructive) {
+                                    viewModel.removeAppetiser(appetiser: appetiser)
+                                }
+                            }
+                    }
+                }
+                .listStyle(PlainListStyle())
+                
+                Spacer()
+                
+                Button {
+                    print("Order Placed!")
+                } label: {
+                    APButton(title: "£40 - Place Order")
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.brandPrimary)
+                .padding(.bottom, 30)
+                
+            }
+            .navigationTitle("🧾 Orders")
         }.navigationViewStyle(.stack)
     }
 }
