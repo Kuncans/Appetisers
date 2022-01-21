@@ -13,7 +13,6 @@ final class OrderViewModel: ObservableObject {
 
     func removeAppetiser (appetiser: Appetiser) {
         orderItems = orderItems.filter {$0.id != appetiser.id}
-        print(orderItems)
     }
     
 }

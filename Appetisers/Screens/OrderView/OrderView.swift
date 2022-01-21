@@ -17,9 +17,18 @@ struct OrderView: View {
                 List {
                     ForEach(viewModel.orderItems) { appetiser in
                         AppetiserCellView(appetiser: appetiser)
-                            .swipeActions(allowsFullSwipe: true) {                                Button("Delete", role: .destructive) {
+                            .swipeActions(edge: .leading) {
+                                
+                                Button (role: .destructive) {
                                     viewModel.removeAppetiser(appetiser: appetiser)
+                                } label: {
+                                    Image(systemName: "trash")
                                 }
+
+                                
+//                                Button("Delete", role: .destructive) {
+//                                    viewModel.removeAppetiser(appetiser: appetiser)
+//                                }
                             }
                     }
                 }
