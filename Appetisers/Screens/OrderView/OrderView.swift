@@ -9,26 +9,21 @@ import SwiftUI
 
 struct OrderView: View {
     
-    @StateObject private var viewModel = OrderViewModel()
+    @EnvironmentObject var order: Order
     
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(viewModel.orderItems) { appetiser in
+                    ForEach(order.items) { appetiser in
                         AppetiserCellView(appetiser: appetiser)
                             .swipeActions(edge: .leading) {
                                 
                                 Button (role: .destructive) {
-                                    viewModel.removeAppetiser(appetiser: appetiser)
+                                    order.remove(appetiser)
                                 } label: {
                                     Image(systemName: "trash")
                                 }
-
-                                
-//                                Button("Delete", role: .destructive) {
-//                                    viewModel.removeAppetiser(appetiser: appetiser)
-//                                }
                             }
                     }
                 }

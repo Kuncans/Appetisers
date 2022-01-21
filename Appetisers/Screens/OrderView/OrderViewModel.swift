@@ -9,10 +9,4 @@ import SwiftUI
 
 final class OrderViewModel: ObservableObject {
  
-    @Published var orderItems = MockData.orderItems
-
-    func removeAppetiser (appetiser: Appetiser) {
-        orderItems = orderItems.filter {$0.id != appetiser.id}
-    }
-    
 }

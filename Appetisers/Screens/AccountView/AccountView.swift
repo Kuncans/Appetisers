@@ -10,6 +10,7 @@ import SwiftUI
 struct AccountView: View {
     
     @StateObject var viewModel = AccountViewModel()
+    @EnvironmentObject var order: Order
 
     var body: some View {
         NavigationView {
