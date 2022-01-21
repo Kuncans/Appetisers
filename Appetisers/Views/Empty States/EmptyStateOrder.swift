@@ -27,7 +27,7 @@ struct EmptyStateOrder: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(.secondary)
                     .padding()
-            }
+            }.offset(y: -50)
         }
     }
 }

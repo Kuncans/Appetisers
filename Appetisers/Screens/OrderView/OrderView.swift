@@ -13,6 +13,7 @@ struct OrderView: View {
     
     var body: some View {
         NavigationView {
+           
             ZStack {
                 VStack {
                     
@@ -43,14 +44,20 @@ struct OrderView: View {
                     .padding(.bottom, 30)
                     
                 }
-                .navigationTitle("🧾 Orders")
-            }
+                
+                if order.items.isEmpty {
+                    EmptyStateOrder()
+                }
+            }.navigationTitle("🧾 Orders")
+            
+            
         }.navigationViewStyle(.stack)
     }
 }
 
 struct OrderView_Previews: PreviewProvider {
+    static let order = Order()
     static var previews: some View {
-        OrderView()
+        OrderView().environmentObject(order)
     }
 }

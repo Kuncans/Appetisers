@@ -16,12 +16,16 @@ final class Order: ObservableObject {
     }
     
     func add(_ appetiser: Appetiser) {
+        
+        var isPresent = false
+        
         for item in items {
             if appetiser.id == item.id {
-                return
+                isPresent = true
             }
         }
-        items.append(appetiser)
+        
+        if !isPresent { items.append(appetiser) }
     }
     
     func remove(_ appetiser: Appetiser) {
