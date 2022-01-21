@@ -15,29 +15,34 @@ struct AccountView: View {
         NavigationView {
             Form {
                 Section(header: Text("Personal Info")) {
-                    TextField("First Name", text: $viewModel.firstName)
-                    TextField("Last Name", text: $viewModel.lastName)
-                    TextField("Email", text: $viewModel.email)
+                    TextField("First Name", text: $viewModel.user.firstName)
+                    TextField("Last Name", text: $viewModel.user.lastName)
+                    TextField("Email", text: $viewModel.user.email)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .disableAutocorrection(true)
-                    DatePicker("Birth Date", selection: $viewModel.birthDate, displayedComponents: .date)
+                    DatePicker("Birth Date", selection: $viewModel.user.birthDate, displayedComponents: .date)
                     
-                    Button {
-                        viewModel.saveChanges()
-                    } label: {
-                        Text("Save Changes")
-                    }
-
                 }
                 Section(header: Text("Requests")) {
-                    Toggle("Extra Napkins", isOn: $viewModel.extraNapkins)
-                    Toggle("Unlimited Refills", isOn: $viewModel.unlimitedRefills)
+                    Toggle("Extra Napkins", isOn: $viewModel.user.extraNapkins)
+                    Toggle("Unlimited Refills", isOn: $viewModel.user.unlimitedRefills)
                 }.toggleStyle(SwitchToggleStyle(tint: .brandPrimary))
+                
+                Button {
+                    viewModel.saveChanges()
+                } label: {
+                    Text("Save Changes")
+                        .frame(maxWidth: .infinity)
+                        .multilineTextAlignment(.center)
+                }
 
             }
             .navigationTitle("😬 Account")
         }
+        .onAppear(perform: {
+            viewModel.loadUserData()
+        })
         .navigationViewStyle(.stack)
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,
