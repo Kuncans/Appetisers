@@ -13,15 +13,20 @@ final class Order: ObservableObject {
     
     func add(_ appetiser: Appetiser) {
 
-        items.forEach { item in
-            if appetiser.id == item.id { return }
+        for item in items {  
+            if appetiser.id == item.id {
+                return
+            }
+            
         }
+        items.append(appetiser)
         
+    }
+    
 //        if items.contains(appetiser) {
 //            return
 //        }
-        items.append(appetiser)
-    }
+        
     
     func remove(_ appetiser: Appetiser) {
         items = items.filter {$0.id != appetiser.id}
