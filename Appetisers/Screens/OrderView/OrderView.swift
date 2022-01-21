@@ -14,6 +14,7 @@ struct OrderView: View {
     var body: some View {
         NavigationView {
             VStack {
+                
                 List {
                     ForEach(order.items) { appetiser in
                         AppetiserCellView(appetiser: appetiser)

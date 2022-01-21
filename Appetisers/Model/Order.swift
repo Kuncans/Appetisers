@@ -12,6 +12,14 @@ final class Order: ObservableObject {
     @Published var items: [Appetiser] = []
     
     func add(_ appetiser: Appetiser) {
+
+        items.forEach { item in
+            if appetiser.id == item.id { return }
+        }
+        
+//        if items.contains(appetiser) {
+//            return
+//        }
         items.append(appetiser)
     }
     
