@@ -35,7 +35,7 @@ struct OrderView: View {
                 Button {
                     print("Order Placed!")
                 } label: {
-                    APButton(title: "£40 - Place Order")
+                    APButton(title: "£\(order.totalPrice, specifier: "%.2f") - Place Order")
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.brandPrimary)

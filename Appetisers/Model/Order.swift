@@ -11,22 +11,18 @@ final class Order: ObservableObject {
     
     @Published var items: [Appetiser] = []
     
+    var totalPrice: Double {
+        items.reduce(0) {$0 + $1.price}
+    }
+    
     func add(_ appetiser: Appetiser) {
-
-        for item in items {  
+        for item in items {
             if appetiser.id == item.id {
                 return
             }
-            
         }
         items.append(appetiser)
-        
     }
-    
-//        if items.contains(appetiser) {
-//            return
-//        }
-        
     
     func remove(_ appetiser: Appetiser) {
         items = items.filter {$0.id != appetiser.id}
