@@ -23,6 +23,7 @@
 		529D5D5F279A238B007C5388 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D5E279A238B007C5388 /* String+Ext.swift */; };
 		529D5D61279AECF1007C5388 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D60279AECF1007C5388 /* User.swift */; };
 		529D5D65279B37EB007C5388 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D64279B37EB007C5388 /* Order.swift */; };
+		529D5D68279B58DA007C5388 /* EmptyStateOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D5D67279B58DA007C5388 /* EmptyStateOrder.swift */; };
 		52D29A072797051900DD96DA /* AppetisersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D29A062797051900DD96DA /* AppetisersApp.swift */; };
 		52D29A092797051900DD96DA /* AppetiserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D29A082797051900DD96DA /* AppetiserTabView.swift */; };
 		52D29A0B2797051A00DD96DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D29A0A2797051A00DD96DA /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		529D5D5E279A238B007C5388 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		529D5D60279AECF1007C5388 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		529D5D64279B37EB007C5388 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		529D5D67279B58DA007C5388 /* EmptyStateOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateOrder.swift; sourceTree = "<group>"; };
 		52D29A032797051900DD96DA /* Appetisers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetisers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D29A062797051900DD96DA /* AppetisersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetisersApp.swift; sourceTree = "<group>"; };
 		52D29A082797051900DD96DA /* AppetiserTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetiserTabView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		529D5D5127999F7A007C5388 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				529D5D66279B58BA007C5388 /* Empty States */,
 				529D5D57279A1B10007C5388 /* Buttons */,
 				529D5D5427999FA3007C5388 /* Image */,
 				529D5D5327999F9B007C5388 /* Cells */,
@@ -196,6 +199,14 @@
 				529D5D5A279A1C38007C5388 /* XDismissButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		529D5D66279B58BA007C5388 /* Empty States */ = {
+			isa = PBXGroup;
+			children = (
+				529D5D67279B58DA007C5388 /* EmptyStateOrder.swift */,
+			);
+			path = "Empty States";
 			sourceTree = "<group>";
 		};
 		52D299FA2797051900DD96DA = {
@@ -310,6 +321,7 @@
 				5222E4BF2797148D00ADBBCA /* AppetiserCellView.swift in Sources */,
 				529D5D5B279A1C38007C5388 /* XDismissButton.swift in Sources */,
 				521D4B4027972CCF00F3CF07 /* APError.swift in Sources */,
+				529D5D68279B58DA007C5388 /* EmptyStateOrder.swift in Sources */,
 				529D5D65279B37EB007C5388 /* Order.swift in Sources */,
 				529D5D5D279A2248007C5388 /* AccountViewModel.swift in Sources */,
 				52D29A172797059B00DD96DA /* AccountView.swift in Sources */,

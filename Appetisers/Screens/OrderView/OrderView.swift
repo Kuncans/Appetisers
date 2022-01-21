@@ -13,36 +13,38 @@ struct OrderView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                
-                List {
-                    ForEach(order.items) { appetiser in
-                        AppetiserCellView(appetiser: appetiser)
-                            .swipeActions(edge: .leading) {
-                                
-                                Button (role: .destructive) {
-                                    order.remove(appetiser)
-                                } label: {
-                                    Image(systemName: "trash")
+            ZStack {
+                VStack {
+                    
+                    List {
+                        ForEach(order.items) { appetiser in
+                            AppetiserCellView(appetiser: appetiser)
+                                .swipeActions(edge: .leading) {
+                                    
+                                    Button (role: .destructive) {
+                                        order.remove(appetiser)
+                                    } label: {
+                                        Image(systemName: "trash")
+                                    }
                                 }
-                            }
+                        }
                     }
+                    .listStyle(PlainListStyle())
+                    
+                    Spacer()
+                    
+                    Button {
+                        print("Order Placed!")
+                    } label: {
+                        APButton(title: "£\(order.totalPrice, specifier: "%.2f") - Place Order")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.brandPrimary)
+                    .padding(.bottom, 30)
+                    
                 }
-                .listStyle(PlainListStyle())
-                
-                Spacer()
-                
-                Button {
-                    print("Order Placed!")
-                } label: {
-                    APButton(title: "£\(order.totalPrice, specifier: "%.2f") - Place Order")
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(.brandPrimary)
-                .padding(.bottom, 30)
-                
+                .navigationTitle("🧾 Orders")
             }
-            .navigationTitle("🧾 Orders")
         }.navigationViewStyle(.stack)
     }
 }
